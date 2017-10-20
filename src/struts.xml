@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="ajax" extends="json-default">
+
+        <action name="depart" class="com.lanou.action.LinkageAction" method="findDepartment">
+
+            <result name="success" type="json">
+
+                <param name="root">departments</param>
+
+            </result>
+
+        </action>
+
+        <action name="num" class="com.lanou.action.LinkageAction" method="findNum">
+
+            <result name="success" type="json">
+
+                <param name="root">nums</param>
+
+            </result>
+
+        </action>
+
+    </package>
+
+</struts>
